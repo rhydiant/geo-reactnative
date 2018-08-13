@@ -1,24 +1,18 @@
 import React, { Component } from "react";
-import {
-  StyleSheet,
-  View,
-  FlatList,
-  ActivityIndicator,
-  Animated
-} from "react-native";
+import { View, FlatList, ActivityIndicator } from "react-native";
 
-import ApiClient from "../lib/ApiClient";
-import ListItem from "../components/ListItem";
-import FadeInView from "../components/FadeInView";
+import GeoApiClient from "../lib/GeoApiClient";
+import ListItem from "../components/GeoListItem";
+import GeoFadeIn from "../components/GeoFadeIn";
 
-export default class Loading extends React.Component {
+export default class GeoLoading extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isLoading: true, dataSource: [] };
   }
 
   componentDidMount() {
-    new ApiClient().fetchLocations().then(data =>
+    new GeoApiClient().fetchLocations().then(data =>
       this.setState({
         isLoading: false,
         dataSource: data
@@ -38,8 +32,9 @@ export default class Loading extends React.Component {
 
     return (
       <View>
-        <FadeInView>
+        <GeoFadeIn>
           <FlatList
+            marginTop={22}
             keyExtractor={(item, index) => index}
             data={this.state.dataSource}
             renderItem={({ item }) => (
@@ -49,7 +44,7 @@ export default class Loading extends React.Component {
               />
             )}
           />
-        </FadeInView>
+        </GeoFadeIn>
       </View>
     );
   }

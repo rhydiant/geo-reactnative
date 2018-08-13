@@ -1,5 +1,5 @@
-import { AppRegistry } from 'react-native';
+import { AppRegistry } from "react-native";
 
-import Loading from './app/screens/Loading';
+import createBottomTabNavigator from "./app/screens/GeoTabNavigator";
 
-AppRegistry.registerComponent('geo', () => Loading);
+AppRegistry.registerComponent("geo", () => createBottomTabNavigator);
