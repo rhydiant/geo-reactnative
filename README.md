@@ -1,6 +1,6 @@
 # geo-reactnative
 
-A time-boxed evaluation of React Native, building out an iOS/Android app.
+A time-boxed evaluation of React Native, building out an iOS/Android app (primarily for comparison with [geo-flutter](https://github.com/rhydiant/geo-flutter)).
 
 Based on [harmony-ui-kit-sketch-freebie](https://www.sketchappsources.com/free-source/2657-harmony-ui-kit-sketch-freebie-resource.html) as the design spec and a [sandboxed API](https://getsandbox.com/sandboxes/willyweather-stub).
 
